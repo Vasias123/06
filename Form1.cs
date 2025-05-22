@@ -43,5 +43,49 @@ namespace _06
                 priceListsBindingSource.DataSource = db.PriceLists.ToList();
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form3 frm = new Form3();
+
+            PriceLists price = (PriceLists)priceListsBindingSource.Current;
+            frm.db = db;
+            frm.price = price;
+
+            DialogResult dr = frm.ShowDialog();
+
+            if (dr == DialogResult.OK)
+            {
+                priceListsBindingSource.DataSource = db.PriceLists.ToList();
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            PriceLists price = (PriceLists)priceListsBindingSource.Current;
+
+            DialogResult dr = MessageBox.Show("ВЫ дествительно хотите удалить роль - " +
+                price.ID.ToString(), "Удаление роли", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (dr == DialogResult.Yes)
+            {
+                db.PriceLists.Remove(price);
+
+                try
+                {
+                    db.SaveChanges();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                priceListsBindingSource.DataSource = db.PriceLists.ToList();
+            }
+        }
     }
 }

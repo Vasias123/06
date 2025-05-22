@@ -16,3 +16,4 @@ Z:\24ИС-2025\24-25 уч год\31ИС\Leev\06\06\obj\Debug\06.csproj.CopyCompl
 Z:\24ИС-2025\24-25 уч год\31ИС\Leev\06\06\obj\Debug\06.exe
 Z:\24ИС-2025\24-25 уч год\31ИС\Leev\06\06\obj\Debug\06.pdb
 Z:\24ИС-2025\24-25 уч год\31ИС\Leev\06\06\obj\Debug\_06.Form2.resources
+Z:\24ИС-2025\24-25 уч год\31ИС\Leev\06\06\obj\Debug\_06.Form3.resources
